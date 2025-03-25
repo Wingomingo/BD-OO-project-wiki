@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RegisterController">
+
+    <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Registrazione" />
+
+    <TextField fx:id="txtNome" promptText="Nome" />
+    <TextField fx:id="txtUsername" promptText="Username" />
+    <TextField fx:id="txtEmail" promptText="Email" />
+    <PasswordField fx:id="txtPassword" promptText="Password" />
+    <ComboBox fx:id="cmbRuolo" promptText="inserisci il tuo ruolo">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="scrittore" />
+                <String fx:value="lettore" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <Button onAction="#handleRegister" text="Registrati" />
+    <Button onAction="#closeRegister" text="Annulla" />
+</VBox>

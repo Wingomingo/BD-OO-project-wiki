@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="Controller.ModificaController"
+      spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+
+    <Label text="Gestione Modifiche" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="tableViewModifiche" prefWidth="600" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="colIdModifica" text="ID Modifica" prefWidth="80"/>
+            <TableColumn fx:id="colTesto" text="Testo" prefWidth="150"/>
+            <TableColumn fx:id="colStato" text="Stato" prefWidth="100"/>
+            <TableColumn fx:id="colIdUtente" text="ID Utente" prefWidth="80"/>
+            <TableColumn fx:id="colIdPagina" text="ID Pagina" prefWidth="80"/>
+            <TableColumn fx:id="colData" text="Data" prefWidth="120"/>
+            <TableColumn fx:id="colProposta" text="Proposta" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Button text="Approva" onAction="#approvaModifica" fx:id="btnApprova"/>
+        <Button text="Rifiuta" onAction="#rifiutaModifica" fx:id="btnRifiuta"/>
+    </HBox>
+
+    <Separator/>
+
+    <Label text="Proponi Nuova Modifica:"/>
+    <HBox spacing="10">
+        <TextField fx:id="txtTestoNuovo" promptText="Testo della modifica" prefWidth="300"/>
+        <TextField fx:id="txtIdPaginaNuovo" promptText="ID della pagina" prefWidth="150"/>
+        <Button text="Proponi" onAction="#proponiModifica" fx:id="btnProponi"/>
+    </HBox>
+
+    <Label fx:id="errorLabel" style="-fx-text-fill: red;"/>
+</VBox>
+
+
+
+
+
+
+
+
+
+

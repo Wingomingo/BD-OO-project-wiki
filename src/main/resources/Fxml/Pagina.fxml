@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="Controller.PaginaController"
+      spacing="10" alignment="CENTER"
+      style="-fx-padding: 20;">
+    <Label text="Gestione Pagine" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="tableViewPagine" onMouseClicked="#selezionaPagina" prefWidth="700" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="colIdPagina" text="ID Pagina" prefWidth="80"/>
+            <TableColumn fx:id="colTitolo" text="Titolo" prefWidth="150"/>
+            <TableColumn fx:id="colTesto" text="Testo" prefWidth="200"/>
+            <TableColumn fx:id="colUsernameAutore" text="Autore" prefWidth="150"/>
+            <TableColumn fx:id="colTitoloCollegata" text="Pagina Collegata" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <TextField fx:id="txtTitolo" promptText="Titolo della pagina" />
+        <TextArea fx:id="txtTesto" promptText="Testo della pagina" prefWidth="400" prefHeight="100"/>
+    </HBox>
+    <HBox spacing="10">
+        <Button text="Aggiungi Pagina" onAction="#aggiungiPagina" fx:id="btnAggiungi"/>
+        <Button text="Modifica Pagina" onAction="#modificaPagina" fx:id="btnModifica"/>
+        <Button text="Elimina Pagina" onAction="#eliminaPagina" fx:id="btnElimina"/>
+    </HBox>
+    <Label fx:id="errorLabel" style="-fx-text-fill: red;"/>
+</VBox>
+
+
+
+
+
+
+

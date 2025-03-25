@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.NotificaController">
+    <Label text="Gestione Notifiche" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    <TableView fx:id="tableViewNotifiche" prefWidth="800" prefHeight="400">
+        <columns>
+            <TableColumn fx:id="colIdNotifica" text="ID Notifica" prefWidth="100"/>
+            <TableColumn fx:id="colData" text="Data" prefWidth="150"/>
+            <TableColumn fx:id="colLetta" text="Letta" prefWidth="100"/>
+            <TableColumn fx:id="colIdModificatore" text="ID Modificatore" prefWidth="100"/>
+            <TableColumn fx:id="colIdAutore" text="ID Autore" prefWidth="100"/>
+            <TableColumn fx:id="colIdCreatore" text="ID Creatore Pagina" prefWidth="150"/>
+        </columns>
+    </TableView>
+</VBox>
+
