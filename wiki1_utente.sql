@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `utente`;
 CREATE TABLE `utente` (
   `ID_utente` int NOT NULL AUTO_INCREMENT,
   `Nome` varchar(50) NOT NULL,
-  `Username` varchar(50) NOT NULL,
+  `Username` varchar(50) NOT NULL UNIQUE,
   `Email` varchar(100) DEFAULT NULL,
   `Password` varchar(100) DEFAULT NULL,
   `Ruolo` enum('Scrittore','Visitatore') DEFAULT 'Visitatore',
