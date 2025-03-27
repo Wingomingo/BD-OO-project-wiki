@@ -18,13 +18,11 @@ public class App extends Application {
         showLogin();
     }
 
-    // Mostra la schermata di login sul primaryStage
     public void showLogin() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
             Parent root = loader.load();
 
-            // Recupera il controller e passa l'istanza dell'app
             LoginController loginController = loader.getController();
             loginController.setApp(this);
 
@@ -37,7 +35,6 @@ public class App extends Application {
         }
     }
 
-    // Mostra la schermata di registrazione (modal)
     public void showRegister() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Register.fxml"));
@@ -57,7 +54,6 @@ public class App extends Application {
         }
     }
 
-    // Mostra il menu principale sul primaryStage
     public void showMenu() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Menu.fxml"));
@@ -72,9 +68,7 @@ public class App extends Application {
         }
     }
 
-    // Metodo di logout: ad esempio, può essere chiamato dal MenuController
     public void logout() {
-        // Qui potresti anche pulire il SessionManager, se necessario.
         showLogin();
     }
 
